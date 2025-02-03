@@ -1,0 +1,28 @@
+{% from "radios/macro.njk" import radios %}
+
+{{ radios({
+  fieldset: {
+    legend: {
+      text: "Where do you live?"
+    }
+  },
+  name: "country",
+  idPrefix: "country",
+  items: [{
+    value: "england",
+    text: "England",
+    checked: checked("country", "england")
+  }, {
+    value: "scotland",
+    text: "Scotland",
+    checked: checked("country", "scotland")
+  }, {
+    value: "wales",
+    text: "Wales",
+    checked: checked("country", "wales")
+  }, {
+    value: "northern-ireland",
+    text: "Northern Ireland",
+    checked: checked("country", "northern-ireland")
+  }]
+}) }}

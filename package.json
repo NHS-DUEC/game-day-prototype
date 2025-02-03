@@ -1,0 +1,80 @@
+{
+  "name": "111-prototype-kit",
+  "version": "0.4.1",
+  "description": "Rapidly create prototypes of NHS.UK 111 Online and related services",
+  "keywords": [
+    "nhsuk",
+    "design system",
+    "prototyping"
+  ],
+  "bugs": {
+    "url": "https://github.com/NHS-DUEC/111-prototype-kit.git/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "bin": {
+    "nhsuk-prototype-rig": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NHS-DUEC/111-prototype-kit.git"
+  },
+  "scripts": {
+    "lint:prettier": "prettier . --check",
+    "lint:prettier:fix": "prettier . --write",
+    "lint:js": "eslint '**/*.js'",
+    "lint:js:fix": "eslint '**/*.js' --fix",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:scss:fix": "stylelint '**/*.scss' --fix",
+    "lint": "npm run lint:prettier && npm run lint:js && npm run lint:scss",
+    "lint:fix": "npm run lint:prettier:fix && npm run lint:js:fix && npm run lint:scss:fix",
+    "dev": "nhsuk-prototype-rig --watch",
+    "start": "nhsuk-prototype-rig",
+    "test": "NODE_ENV=test node --test",
+    "coverage": "NODE_ENV=test node --test --experimental-test-coverage",
+    "release": "np"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.2.4",
+    "@x-govuk/govuk-prototype-filters": "^1.1.0",
+    "browser-sync": "^3.0.0",
+    "client-sessions": "^0.8.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cosmiconfig": "^9.0.0",
+    "dotenv": "^16.0.0",
+    "esbuild": "^0.24.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "express": "^4.17.3",
+    "express-rate-limit": "^7.1.0",
+    "express-session": "^1.13.0",
+    "lodash": "^4.17.21",
+    "nhsuk-decorated-components": "^0.1.0",
+    "nhsuk-frontend": "^9.0.0",
+    "nhsuk-prototype-rig": "file:./",
+    "nodemon": "^3.1.9",
+    "nunjucks": "^3.2.1",
+    "portscanner": "^2.2.0",
+    "validate.js": "^0.13.1"
+  },
+  "devDependencies": {
+    "@x-govuk/eslint-config": "^0.0.1",
+    "mock-req-res": "^1.2.0",
+    "np": "^10.2.0",
+    "prettier": "^3.4.2",
+    "sinon": "^19.0.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-gds": "^2.0.0",
+    "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module"
+}

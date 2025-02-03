@@ -1,0 +1,23 @@
+{% extends defaultUnbrandedLayout or defaultRigLayout or "layouts/default.html" %}
+
+{% set title = "Sorry, there is a problem with the prototype" %}
+{% set stackHtml -%}
+<pre class="nhsuk-u-margin-0" tabindex="0"><code class="nhsuk-u-font-size-14">{{ error.stack }}</code></pre>
+{%- endset %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-xl">{{ title }}</h1>
+
+      <h2 class="nhsuk-heading-m nhsuk-u-margin-bottom-2">{{ error.name }}</h2>
+      <p class="nhsuk-caption-m">{{ error.message | nl2br | nl2br | safe }}</p>
+      {{ details({
+        text: "Stack trace",
+        HTML: stackHtml
+      }) }}
+
+      <pre class="nhsuk-u-margin-top-8">Status code: {{ error.status }}</pre>
+    </div>
+  </div>
+{% endblock %}

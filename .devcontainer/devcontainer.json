@@ -1,0 +1,12 @@
+{
+  "forwardPorts": [2100, 3000],
+  "portsAttributes": {
+    "2100": {
+      "label": "Prototype app",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteEnv": {
+    "PORT": "2100"
+  }
+}
