@@ -1,0 +1,45 @@
+{% set title = "What was your sex at birth?" %}
+{% extends "layouts/111-online-default.html" %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="main-content" role="main">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          {{ radios({
+            idPrefix: "example",
+            name: "example",
+            fieldset: {
+              legend: {
+                text: title,
+                classes: "nhsuk-fieldset__legend--l",
+                isPageHeading: true
+              }
+            },
+            items: [
+              {
+                value: "Male",
+                text: "Male"
+              },
+              {
+                value: "Female",
+                text: "Female"
+              }
+            ]
+          }) }}
+
+          {% call callout({
+            classes: "app-callout--info"
+          }) %}
+          <p>This online triage depends on knowing your registered sex at birth, not your gender identity.</p>
+          <p>If you are doing this for someone else, tell us their sex at birth if you know.</p>
+          <p>We need to know this information so we can ask relevant clinical questions.</p>
+          <p>If you feel uncomfortable giving this information, or do not see an option that represents you correctly, you can call 111 to talk to a nurse.</p>
+          {% endcall %}
+
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

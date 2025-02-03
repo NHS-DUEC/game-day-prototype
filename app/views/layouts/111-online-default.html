@@ -1,5 +1,8 @@
+{% from 'macros/attributes.njk' import nhsukAttributes %}
+{% from "components/111-online/footer/macro.njk" import footer as appFooter with context %}
+{% from "components/111-online/callout/macro.njk" import callout with context %}
+{% from 'components/radios/macro.njk' import radios with context %}
 {% extends "layouts/default.html" %}
-{% from "components/111-online/footer/macro.njk" import footer as appFooter %}
 {% block footer %}
   {{ appFooter() }}
 {% endblock %}

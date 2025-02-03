@@ -1,0 +1,7 @@
+<div class="app-callout {%- if params.classes %} {{ params.classes }}{% endif %}" {{- nhsukAttributes(params.attributes) }}>
+  {% if caller %}
+    {{ caller() }}
+  {% else %}
+    {{ params.html | safe }}
+  {% endif %}
+</div>
