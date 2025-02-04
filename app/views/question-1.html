@@ -8,8 +8,8 @@
         <div class="nhsuk-grid-column-two-thirds">
 
           {{ radios({
-            idPrefix: "example",
-            name: "example",
+            idPrefix: "q1",
+            name: "q1",
             fieldset: {
               legend: {
                 text: title,
@@ -37,6 +37,11 @@
           <p>We need to know this information so we can ask relevant clinical questions.</p>
           <p>If you feel uncomfortable giving this information, or do not see an option that represents you correctly, you can call 111 to talk to a nurse.</p>
           {% endcall %}
+
+          {{ button({
+            text: "Save and continue",
+            href: 'question-2'
+          }) }}
 
         </div>
       </div>

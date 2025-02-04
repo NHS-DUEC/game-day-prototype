@@ -1,0 +1,45 @@
+{% set title = "You should get a call within 20 minutes" %}
+{% extends "layouts/111-online-default.html" %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper" id="main-content" role="main">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <h1 class="nhsuk-heading-l">{{ title }}</h1>
+
+          {% call callout({
+            classes: "app-callout--info"
+          }) %}
+          <p>Remember to tell the nurse about your care plan.</p>
+          {% endcall %}
+
+          <p>It was booked at 11:26am. A nurse will call 0796123123. The number might show as 'unknown' on your display.</p>
+
+          {% set expanders = [
+            {
+              text: "What if I don't get a call in 20 minutes?",
+              html: "<p>Call 111, tell them your name and that you've been waiting for an urgent callback that you booked online. They should be able to find you in the callback queue using the same details.</p>"
+            }, {
+              text: "What if the symptoms get worse while I'm waiting?",
+              html: "<p>Call 111. Tell them your name and that you booked a callback online, but the symptoms have got worse while you are waiting.</p>"
+            }, {
+              text: "What if I miss the call?",
+              html: "<p>A nurse will try to call you up to 3 times. If they cannot contact you emergency services might be sent to make sure you're ok.</p>"
+            }
+          ] %}
+
+          {% for question in expanders %}
+            {{
+              details({
+                text: question.text,
+                HTML: question.html
+              })
+            }}
+          {% endfor %}
+
+        </div>
+      </main>
+    </div>
+  {% endblock %}

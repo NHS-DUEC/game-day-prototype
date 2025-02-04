@@ -5,14 +5,37 @@
 {% block main %}
   <div class="nhsuk-width-container">
     <main class="nhsuk-main-wrapper" id="main-content" role="main">
-      <h1 class="nhsuk-heading-xl">{{ serviceName + " prototype" }}</h1>
+      <h1 class="nhsuk-heading-xl">Game day</h1>
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-          <ul class="nhsuk-list">
-            <li>
-              <a href="./question-1">What was your sex at birth</a>
-            </li>
-          </ul>
+
+          {% from 'components/contents-list/macro.njk' import contentsList %}
+
+          {{ contentsList({
+            items: [
+              {
+                href: "./question-1",
+                text: "What was your sex at birth"
+              },
+              {
+                href: "./question-2",
+                text: "Do you have a care plan for these symptoms?"
+              },
+              {
+                href: "./question-3",
+                text: "Find the right topic"
+              },
+              {
+                href: "./question-4",
+                text: "Book a call with a 111 nurse now"
+              },
+              {
+                href: "./question-5",
+                text: "You should get a call in 20 minutes"
+              }
+            ]
+          }) }}
+
         </div>
       </div>
     </main>
