@@ -1,9 +1,10 @@
 {% from 'macros/attributes.njk' import nhsukAttributes %}
-{% from "components/111-online/footer/macro.njk" import footer as appFooter with context %}
-{% from "components/111-online/callout/macro.njk" import callout with context %}
 {% from 'components/radios/macro.njk' import radios with context %}
 {% from 'components/button/macro.njk' import button %}
 {% from 'components/details/macro.njk' import details %}
+{% from 'components/inset-text/macro.njk' import insetText %}
+{% from "components/111-online/callout/macro.njk" import callout with context %}
+{% from "components/111-online/footer/macro.njk" import footer as appFooter with context %}
 {% extends "layouts/default.html" %}
 {% block footer %}
   {{ appFooter() }}

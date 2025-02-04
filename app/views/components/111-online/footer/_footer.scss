@@ -5,6 +5,10 @@
   }
 
   &__section-break {
-    border-bottom-color: $nhsuk-form-border-color;
+    border-bottom-color: $color_nhsuk-grey-3;
+  }
+
+  &__inset-text {
+    border-left-color: $color_nhsuk-grey-3;
   }
 }
