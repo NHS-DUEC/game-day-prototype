@@ -1,3 +1,4 @@
 {
-  "serviceName": "111 Online"
+  "serviceName": "111 Online",
+  "useAuth": false
 }
