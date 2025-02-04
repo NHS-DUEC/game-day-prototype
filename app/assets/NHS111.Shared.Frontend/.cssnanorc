@@ -1,0 +1,8 @@
+{
+  "preset": [
+    "default",
+    {
+      "colormin": false
+    }
+  ]
+}

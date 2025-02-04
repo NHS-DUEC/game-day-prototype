@@ -1,0 +1,13 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": 3,
+        "useBuiltIns": "usage",
+        "debug": false // set to true to debug what polyfills are included and why
+      }
+    ]
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
+}

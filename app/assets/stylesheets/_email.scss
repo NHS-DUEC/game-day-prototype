@@ -1,0 +1,60 @@
+$email-page-width: 640px;
+
+.nhsuk-width-container--email {
+  margin: 0 auto;
+  max-width: $email-page-width;
+}
+
+.app-email {
+  background-color: transparent;
+}
+
+.app-email__header {
+  .nhsuk-header__container {
+    @include nhsuk-responsive-padding(5, "left");
+    @include nhsuk-responsive-padding(5, "right");
+    margin: 0;
+  }
+}
+
+.app-email__metadata {
+  @include nhsuk-typography-responsive(16);
+  @include nhsuk-responsive-margin(5);
+
+  @include mq($from: desktop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  div {
+    display: block;
+    margin-bottom: nhsuk-spacing(1);
+  }
+
+  dt {
+    display: inline-block;
+    margin-right: nhsuk-spacing(1);
+  }
+
+  dd {
+    display: inline-block;
+    margin-left: 0;
+  }
+}
+
+.app-email__message {
+  background-color: $color_nhsuk-white;
+  border: 1px solid $color_nhsuk-grey-2;
+  border-radius: 10px 10px 0 0;
+  border-top: nhsuk-spacing(4) solid $color_nhsuk-grey-2;
+  padding: 0;
+  max-width: $email-page-width;
+
+  * {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+.app-email__message-content {
+  @include nhsuk-responsive-padding(5);
+}

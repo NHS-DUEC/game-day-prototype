@@ -1,0 +1,9 @@
+@import "nhsuk-frontend/packages/nhsuk";
+@import "email";
+@import "unbranded";
+
+// NHS 111 "Shared Frontend" SCSS components imported via dedicated include
+@import "shared-frontend";
+
+// App/Prototype specific components
+@import "../../views/components/111-online/footer/footer";
